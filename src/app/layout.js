@@ -15,7 +15,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} ${oswald.variable}`}>
-      <body className="flex min-h-screen flex-col bg-bg font-sans text-white antialiased">
+      <body className="flex min-h-screen flex-col bg-bg font-sans text-fgtext-fg antialiased">
         <FitLogProvider>
           <Navbar />
           <main className="flex-1">{children}</main>

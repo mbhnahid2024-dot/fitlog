@@ -11,7 +11,7 @@ export default function WorkoutStats({ duration, caloriesBurned, rating }) {
     <div className="flex flex-wrap items-center gap-x-5 gap-y-1 text-sm text-muted">
       {items.map(({ Icon, text }, i) => (
         <span key={i} className="flex items-center gap-1.5">
-          <Icon size={15} className="text-accent" />
+          <Icon size={15} className="text-accent-fg" />
           {text}
         </span>
       ))}

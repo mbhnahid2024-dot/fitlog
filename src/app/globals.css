@@ -1,25 +1,49 @@
 @import "tailwindcss";
 
-/* Colour palette -> classes like bg-bg, bg-card, text-accent, border-line */
-@theme {
-  --color-bg: #0f1013;
-  --color-card: #1b1e24;
-  --color-accent: #ccff00;
-  --color-muted: #a1a1aa;
-  --color-line: #30343c;
+/* LIGHT theme (default) */
+:root {
+  color-scheme: light dark; /* native scrollbars and <select> follow the theme */
+  --bg: #f4f5f7;
+  --card: #ffffff;
+  --fg: #111318;
+  --muted: #5b6270;
+  --line: #d9dce3;
+  --accent: #ccff00;
+  --accent-fg: #476000; /* readable green for text on light backgrounds */
 }
 
-/* Fonts -> classes font-sans, font-heading */
+/* DARK theme: applied when the user's system is in dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f1013;
+    --card: #1b1e24;
+    --fg: #ffffff;
+    --muted: #a1a1aa;
+    --line: #30343c;
+    --accent: #ccff00;
+    --accent-fg: #ccff00;
+  }
+}
+
+/* Tell Tailwind about the variables -> bg-bg, bg-card, text-fg, text-accent-fg-fg ... */
 @theme inline {
+  --color-bg: var(--bg);
+  --color-card: var(--card);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-fg: var(--accent-fg);
+
   --font-sans: var(--font-inter);
   --font-heading: var(--font-oswald);
 }
 
 html {
-  scroll-behavior: smooth; /* smooth scroll for the #library anchor */
+  scroll-behavior: smooth;
 }
 
 body {
-  background: #0f1013;
-  color: #ffffff;
+  background: var(--bg);
+  color: var(--fg);
 }

@@ -9,7 +9,7 @@ export default function SortDropdown({ value, onChange }) {
         <select
           value={value}
           onChange={(e) => onChange(e.target.value)}
-          className="appearance-none rounded-lg border border-line bg-bg py-2 pl-4 pr-10 text-white outline-none focus:border-accent"
+          className="appearance-none rounded-lg border border-line bg-bg py-2 pl-4 pr-10 text-fgtext-fg outline-none focus:border-accent"
         >
           {SORT_OPTIONS.map((o) => (
             <option key={o.value} value={o.value}>

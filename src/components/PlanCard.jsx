@@ -49,7 +49,7 @@ export default function PlanCard({ workout, variant }) {
 
         {isPlan &&
           (done ? (
-            <span className="flex items-center gap-1.5 rounded-full border border-accent px-4 py-2 text-sm font-semibold text-accent">
+            <span className="flex items-center gap-1.5 rounded-full border border-accent px-4 py-2 text-sm font-semibold text-accent-fg">
               <Check size={16} /> Completed
             </span>
           ) : (
@@ -66,7 +66,7 @@ export default function PlanCard({ workout, variant }) {
           onClick={() =>
             isPlan ? removeFromPlan(workout.id) : removeFromSaved(workout.id)
           }
-          className="p-2 text-muted transition hover:text-white"
+          className="p-2 text-muted transition hover:text-fgtext-fg"
         >
           <X size={18} />
         </button>

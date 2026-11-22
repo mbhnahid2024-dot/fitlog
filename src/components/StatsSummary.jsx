@@ -15,7 +15,7 @@ export default function StatsSummary({ plan }) {
           <p className="text-sm text-muted">{s.label}</p>
           <p
             className={`mt-2 font-heading text-4xl font-bold sm:text-5xl ${
-              s.accent ? "text-accent" : "text-white"
+              s.accent ? "text-accent-fg" : "text-fgtext-fg"
             }`}
           >
             {s.value}

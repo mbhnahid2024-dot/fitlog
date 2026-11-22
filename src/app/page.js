@@ -1,3 +1,4 @@
+
 import Hero from "@/components/Hero";
 import WorkoutLibrary from "@/components/WorkoutLibrary";
 import ErrorMessage from "@/components/ErrorMessage";
@@ -19,7 +20,7 @@ export default async function HomePage() {
 
       <section
         id="library"
-        className="mx-auto w-full max-w-7xl scroll-mt-6 px-4 py-16 sm:px-6"
+        className="mx-auto w-full max-w-7xl scroll-mt-20 px-4 py-16 sm:px-6"
       >
         <h2 className="font-heading text-4xl font-bold uppercase">
           The Library

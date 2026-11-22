@@ -40,8 +40,8 @@ export default function MyPlanPage() {
               onClick={() => setTab(t.key)}
               className={`rounded-lg px-5 py-2 text-sm transition ${
                 tab === t.key
-                  ? "bg-bg font-semibold text-white"
-                  : "text-muted hover:text-white"
+                  ? "bg-bg font-semibold text-fgtext-fg"
+                  : "text-muted hover:text-fgtext-fg"
               }`}
             >
               {t.label}

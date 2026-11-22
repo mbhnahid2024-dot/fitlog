@@ -20,7 +20,7 @@ export default function WorkoutDetails({ workout }) {
 
   return (
     <div className="mx-auto w-full max-w-7xl px-4 py-10 sm:px-6">
-      <Link href="/" className="mb-6 inline-flex items-center gap-2 text-sm text-muted hover:text-white">
+      <Link href="/" className="mb-6 inline-flex items-center gap-2 text-sm text-muted hover:text-fgtext-fg">
         <ArrowLeft size={16} /> Back to workouts
       </Link>
 
@@ -57,7 +57,7 @@ export default function WorkoutDetails({ workout }) {
 
           {/* Instructions */}
           <h2 className="mb-3 mt-8 font-heading text-2xl uppercase">Instructions</h2>
-          <ol className="list-inside list-decimal space-y-2 text-muted marker:text-accent">
+          <ol className="list-inside list-decimal space-y-2 text-muted marker:text-accent-fg">
             {(instructions ?? []).map((step, i) => (
               <li key={i}>{step}</li>
             ))}
