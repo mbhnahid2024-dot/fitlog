@@ -1,5 +1,10 @@
-import { getWorkouts } from "@/lib/api";
-export default async function HomePage() {
-  const workouts = await getWorkouts();
-  return <pre className="p-6">{JSON.stringify(workouts[0], null, 2)}</pre>;
+import Hero from "@/components/Hero";
+
+export default function HomePage() {
+  return (
+    <>
+      <Hero />
+      <section id="library" className="h-96 scroll-mt-6 p-10">Library soon…</section>
+    </>
+  );
 }
