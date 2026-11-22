@@ -1,11 +1,21 @@
+
+import { Suspense } from "react";
 import { Inter, Oswald } from "next/font/google";
 import "./globals.css";
+
 import { FitLogProvider } from "@/context/FitLogContext";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const oswald = Oswald({ subsets: ["latin"], variable: "--font-oswald" });
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
+
+const oswald = Oswald({
+  subsets: ["latin"],
+  variable: "--font-oswald",
+});
 
 export const metadata = {
   title: "FitLog – Workout Library",
@@ -15,10 +25,18 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} ${oswald.variable}`}>
-      <body className="flex min-h-screen flex-col bg-bg font-sans text-fgtext-fg antialiased">
+      <body className="flex min-h-screen flex-col bg-bg font-sans text-fg antialiased">
         <FitLogProvider>
-          <Navbar />
+          <Suspense
+            fallback={
+              <div className="sticky top-0 z-50 h-[57px] border-b border-line bg-bg" />
+            }
+          >
+            <Navbar />
+          </Suspense>
+
           <main className="flex-1">{children}</main>
+
           <Footer />
         </FitLogProvider>
       </body>
